@@ -1,11 +1,22 @@
-## How to use our project:
+# How to use our project:
 
-- clone this repository
-```bash
-   git clone https://github.com/allyn8444/
-   ```
+## References:
 - Check the Schematic Diagram and Copy the Circuit Diagram. (For more info, check the [project documentation](https://docs.google.com/document/d/1W3UlDw9eblVcIKKHZNt2959oXTZyLfrAGaKOUJA_Q1o/edit?usp=sharing))
 - Also check the this [Tinkercad Diagram](https://www.tinkercad.com/things/77Hawcx0KD3-copy-of-motion-and-temperature-sensor-project-ds2?sharecode=MX6qyf7J8CmovFul3lb2Niv0tt2J1S9G0pq7DLUpKgg) for testing.
+
+
+## Installations and Downloads:
+- Download [VSCode IDE](https://code.visualstudio.com/download) 
+- Install [node](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs) in your computer
+- Download [Arduino IDE](https://www.arduino.cc/en/software)
+
+
+## Starting Procecss
+- Clone this repository
+```bash
+   git clone https://github.com/allyn8444/DreamCatcher.git
+   ```
+- After cloning, open the terminal and enter `npm install`
 - get Arduino IDE and upload `DreamCatcher.ino` file
 - check the COM ports in your end
 - create an `.env` file and put serial port value e.g. `SERIAL_PORT = COM5`
