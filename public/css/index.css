@@ -1,0 +1,281 @@
+.sidebar {
+    border-radius: 8px;
+    width: 100px;
+    height: 90%;
+    max-height: 566px;
+    margin: auto 0 auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar a>img {
+    width: 30px;
+    height: 30px;
+}
+
+.sidebar .upper-navs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.sidebar>a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+
+.data-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    /* background-color: antiquewhite; */
+    width: 100%;
+    margin: auto 0 auto 0;
+}
+
+.row-1,
+.row-2,
+.row-3 {
+    display: flex;
+}
+
+.row-2,
+.row-3 {
+    gap: 0.8rem;
+}
+
+/* BABY STATUS and DATE */
+.row-1 {
+    /* background-color: cadetblue; */
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.baby-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.baby-info img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.baby-name {
+    margin-right: 1rem;
+}
+
+.baby-status {
+    border: 1px solid red;
+}
+
+
+.date {
+    /* background-color: red; */
+    display: flex;
+    gap: 10px;
+}
+
+.month,
+.day,
+.year {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.month>span:nth-child(1),
+.day>span:nth-child(1),
+.year>span:nth-child(1) {
+    background: linear-gradient(to bottom, #999999 50%, #101010 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    /*  */
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 33px;
+    border-radius: 4px;
+}
+
+.month>span:nth-child(2),
+.day>span:nth-child(2),
+.year>span:nth-child(2) {
+    font-size: 8px;
+    color: #A291FD;
+}
+
+
+/* ----------------- */
+.current-temp,
+.current-move {
+    width: 30%;
+    min-width: 241px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+
+.current-temp>div,
+.current-move>div {
+    display: flex;
+    /* background-color: antiquewhite; */
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+
+
+}
+
+.current-temp>div>span:nth-child(2),
+.current-move>div>span:nth-child(2) {
+    color: #A291FD;
+    text-align: center;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+/* ---- HORIZONTAL POSITION ADJUSTMENTS OF PURPLE TEXT IN DATA */
+.current-temp>div>span:nth-child(2) {
+    margin-top: 2.2rem;
+}
+
+.current-move>div>span:nth-child(2) {
+    margin-top: 7.3rem;
+}
+
+
+/* ---- TITLES IN THE CONTAINERS */
+.current-temp>span:nth-child(1),
+.current-move>span:nth-child(1),
+.move-stats>span:nth-child(1),
+.temp-stats>span:nth-child(1) {
+    color: #999;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /*  */
+    display: flex;
+    align-items: center;
+    /* Centers the image vertically */
+}
+
+
+/* ---- TEMP and MOVE VALUE */
+.temp-value,
+.move-value {
+
+    text-align: center;
+    font-size: 150px;
+    font-weight: 600;
+    line-height: 64px;
+    /*  */
+    background: linear-gradient(to bottom, #999999 40%, #101010 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    /*  */
+    /* background-color: antiquewhite; */
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ---- TEMP and MOVE STATISTICS */
+.temp-stats,
+.move-stats {
+    width: 70%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+
+/* ---- MOVE and TEMP STATS ICONS */
+.move-stats>span:nth-child(1)>img,
+.temp-stats>span:nth-child(1)>img {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+/* ---- THE ACTUAL LINE GRAPH DATA - STATISTICS */
+.move-stats>span:nth-child(2),
+.temp-stats>span:nth-child(2) {
+    margin-top: 16px;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(87, 86, 86); */
+}
+
+.tooltip {
+    margin-left: 5px;
+    font-weight: bold;
+    color: #c4c4c4;
+}
+
+/* TODO: fix stats tooltip css*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

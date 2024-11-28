@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | DreamCatcher</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/index.css">
+
+</head>
+
+<body>
+
+    <!-- THIS IS THE DATA -->
+    <!-- <div id="sample" style="color: white;"></div> -->
+
+    <main class="wrapper">
+        <nav class="sidebar">
+            <div class="upper-navs">
+                <a href="/">
+                    <img src="/images/home.png" alt="Home Icon">
+                </a>
+                <a href="profile.html">
+                    <img src="/images/profile.png" alt="Profile Icon">
+                </a>
+                <a href="settings.html">
+                    <img src="/images/settings.png" alt="Settings Icon">
+                </a>
+            </div>
+
+            <a href="">
+                <img src="/images/logout.png" alt="Logout Icon">
+            </a>
+        </nav>
+
+        <section class="data-section">
+            <div class="row-1">
+                <div class="baby-info">
+                    <img src="/images/user.png" alt="">
+                    <span class="baby-name">{User}</span>
+                    <span class="baby-status">Currently asleep</span>
+                </div>
+                <div class="date">
+                    <span class="month">
+                        <span></span>
+                        <span>Month</span>
+                    </span>
+                    <span class="day">
+                        <span></span>
+                        <span>Day</span>
+                    </span>
+                    <span class="year">
+                        <span></span>
+                        <span>Year</span>
+                    </span>
+                </div>
+            </div>
+            <div class="row-2">
+                <div class="current-temp">
+                    <span>Current room temperature is...</span>
+                    <div>
+                        <span class="temp-value">0</span>
+                        <span>°C</span>
+                    </div>
+                </div>
+                <div class="temp-stats">
+                    <span>
+                        <img src="/images/stats-icon.png" alt="Statistics Icon">
+                        Room Temperature Statistics
+                        <span class="tooltip">ⓘ
+                            <span class="tooltiptext">Tooltip text</span>
+                        </span>
+                    </span>
+
+                    <!-- temp-stats-chart-here -->
+                    <span>
+                        <canvas id="temp-chart"></canvas>
+                    </span>
+                </div>
+            </div>
+            <div class="row-3">
+                <div class="current-move">
+                    <span>{User} moved</span>
+                    <div>
+                        <span class="move-value">0</span>
+                        <span>×</span>
+                    </div>
+
+                </div>
+                <div class="move-stats">
+                    <span>
+                        <img src="/images/stats-icon.png" alt="Statistics Icon">
+                        Movement Statistics
+                        <span class="tooltip">ⓘ
+                            <span class="tooltiptext">Tooltip text</span>
+                        </span>
+                    </span>
+
+                    <!-- move-stats-chart-here -->
+                    <span>
+                        <canvas id="move-chart"></canvas>
+                    </span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CHART JS -->
+    <script src="/chart.umd.js"></script>
+    <script src="/script/chart.js"> </script>
+
+
+    <!-- CLIENT SIDE -->
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="/script/values.js"></script>
+    <script src="/script/bot.js"></script>
+</body>
+
+</html>

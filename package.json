@@ -1,0 +1,13 @@
+{
+    "name": "dreamcatcher",
+    "version": "1.0.0",
+    "description": "Arduino based child/infant monitor with Node.JS WebApp integration",
+    "dependencies": {
+        "chart.js": "^4.4.6",
+        "dotenv": "^16.4.5",
+        "express": "^4.21.1",
+        "node-telegram-bot-api": "^0.66.0",
+        "serialport": "^12.0.0",
+        "socket.io": "^4.8.1"
+    }
+}
