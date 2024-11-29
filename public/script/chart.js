@@ -147,6 +147,13 @@ let moveChart = new Chart(move, {
                 }
             },
             y: {
+
+                min: 0,
+                max: 10,
+                ticks: {
+                    // forces step size to be 5 units
+                    stepSize: 1
+                },
                 grid: {
                     color: '#404040'
                 },
@@ -161,34 +168,65 @@ let moveChart = new Chart(move, {
 
 
 
-
-// Function to append a value based on the interval
 function appendValue() {
-    // Your logic to append a value (could be updating a chart, adding to an array, etc.)
-
-
-    // TODO: adjust length maximum
+    // Check if the length of the arrays is less than 12
     if (temp_data.length < 12 && move_data.length < 12) {
         console.log('Appending value...');
 
-        temp_data.push(window.getTemp)
+        // Add new data
+        temp_data.push(window.getTemp);
         move_data.push(window.getMotion);
 
-        // console.log("current temp data: " + temp_data)
-        // console.log("current motion data: " + move_data)
+        // Store the updated arrays in localStorage
+        localStorage.setItem('temp_data', JSON.stringify(temp_data));
+        localStorage.setItem('move_data', JSON.stringify(move_data));
 
-        // updates chart UI values
-        tempChart.update()
-        moveChart.update()
+        // Update chart with new data
+        tempChart.update();
+        moveChart.update();
+    } else {
+        // Reset the arrays if their length exceeds or equals 12
+        console.log("RESET THE ARRAYS");
+
+        // Clear the data in the arrays
+        temp_data = [];
+        move_data = [];
+
+        // Store the reset arrays in localStorage
+        localStorage.setItem('temp_data', JSON.stringify(temp_data));
+        localStorage.setItem('move_data', JSON.stringify(move_data));
+
+        // Reset the chart data
+        tempChart.data.datasets[0].data = temp_data;
+        moveChart.data.datasets[0].data = move_data;
+
+        // Update the charts with the reset data
+        tempChart.update();
+        moveChart.update();
     }
-    else {
-        // TODO: reset the UI chart
-        console.log("RESET THE ARRAYS")
-    }
-
-
-
 }
+
+// To retrieve the data when the page loads or whenever you need it
+function retrieveStoredData() {
+    let storedTempData = JSON.parse(localStorage.getItem('temp_data')) || [];
+    let storedMoveData = JSON.parse(localStorage.getItem('move_data')) || [];
+
+    // Assign the retrieved data back to the arrays
+    temp_data = storedTempData;
+    move_data = storedMoveData;
+
+    // Update the charts with the retrieved data
+    tempChart.data.datasets[0].data = temp_data;
+    moveChart.data.datasets[0].data = move_data;
+
+    // Update the charts with the retrieved data
+    tempChart.update();
+    moveChart.update();
+}
+
+// Call retrieveStoredData when the page loads or after a reset
+retrieveStoredData();
+
 
 
 // Function to convert the interval to milliseconds and start appending
@@ -200,7 +238,7 @@ function startAppending() {
     // Determine the interval based on the chosen value
     switch (chosenInterval) {
         case "10":
-            intervalMs = 49800; // 10 mins = 49.8 seconds
+            intervalMs = 4980; // 10 mins = 49.8 seconds
             break;
         case "15":
             intervalMs = 75000; // 15 mins = 1 min 15 secs
@@ -218,6 +256,10 @@ function startAppending() {
             console.log('Invalid interval value.');
             return;
     }
+
+    // Save in local storage for later use
+    localStorage.setItem('intervalMs', intervalMs);
+    console.log('Interval set to:', intervalMs / 1000, 'seconds');
 
     // Start appending values based on the calculated interval
     setInterval(appendValue, intervalMs);

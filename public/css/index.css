@@ -78,8 +78,55 @@
     margin-right: 1rem;
 }
 
+.baby-status-container {
+    border: 1px solid #999999;
+    background-color: #212121;
+    padding: 10px;
+    border-radius: 40px;
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* TODO: change color for woke up status */
+.baby-status-container>div {
+    border-radius: 18px;
+    /* opacity: 0.2211; */
+    background: #6cd33d81;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.baby-status-container>div>div {
+    border-radius: 10px;
+    background: #51ff00;
+    width: 10px;
+    height: 10px;
+    animation: pulseEffect 1s infinite ease-in-out;
+}
+
+
+@keyframes pulseEffect {
+
+    0%,
+    100% {
+        transform: scale(1);
+        /* Normal size (10px) */
+    }
+
+    50% {
+        transform: scale(1.2);
+        /* Bigger size (12px) */
+    }
+}
+
 .baby-status {
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    color: #d0d0d0;
+    font-weight: 600;
 }
 
 
@@ -98,6 +145,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 6px;
 
 }
 

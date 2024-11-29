@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         console.log("LocalStorage cleared");
+        alert("Temperature and Movement Data cleared")
     });
 });
 

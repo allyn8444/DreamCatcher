@@ -14,7 +14,7 @@
     <main class="wrapper">
         <nav class="sidebar">
             <div class="upper-navs">
-                <a href="/">
+                <a href="index.html">
                     <img src="/images/home.png" alt="Home Icon">
                 </a>
                 <a href="profile.html">
@@ -25,17 +25,142 @@
                 </a>
             </div>
 
-            <a href="">
+            <a id="logout" href="/">
                 <img src="/images/logout.png" alt="Logout Icon">
             </a>
         </nav>
 
+
+
         <section class="data-section">
 
+            <!-- <section class="data">
+            </section> -->
+
+
+            <div>
+                <div class="baby-data">
+
+                    <div class="br-1">
+                        <div>
+                            <img src="/images/user.png" alt="">
+                        </div>
+
+                        <div>
+                            <div class="baby-status-container">
+                                <div>
+                                    <div></div>
+                                </div>
+                                <span class="baby-status"></span>
+                            </div>
+                            <h1>Baby <span class="b-name">Ashley</span></h1>
+                            <p>I am a <span class="b-gender">She</span></p>
+                        </div>
+                    </div>
+
+                    <div class="br-2">
+                        <div>
+                            <div><img src="/images/weight.png" alt="">
+                                <span class="b-weight"></span>
+                            </div>
+                            <div> <img src="/images/nationality.png" alt="">
+                                <span class="b-nationality"></span>
+                            </div>
+
+                            <div>
+                                <img src="/images/age.png" alt="">
+                                <span class="b-age"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="/images/guardian.png" alt="">
+                                <span class="b-guardian"></span>
+                            </div>
+
+                            <div>
+                                <img src="/images/quality.png" alt="">
+                                <span class="b-character"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="date">
+                    <span class="month">
+                        <span></span>
+                        <span>Month</span>
+                    </span>
+                    <span class="day">
+                        <span></span>
+                        <span>Day</span>
+                    </span>
+                    <span class="year">
+                        <span></span>
+                        <span>Year</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="historical-data">
+                <div class="tb1">
+                    <div>
+                        <img src="/images/stats-icon.png" alt="">
+                        <p>Temperature Data History</p>
+                    </div>
+
+                    <div class="table-container">
+                        <!-- <div class="table-header">Room Temperature Table</div> -->
+                        <div class="table-body">
+                            <table id="temperatureTable">
+                                <thead>
+                                    <tr>
+                                        <th>Room Temperature</th>
+                                        <th>Status</th>
+                                        <th>Time & Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Rows will be generated dynamically here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tb2">
+                    <div>
+                        <img src="/images/stats-icon.png" alt="">
+                        <p>Movement Data History</p>
+                    </div>
+
+                    <div class="table-container">
+                        <!-- <div class="table-header">Movement Count Table</div> -->
+                        <div class="table-body">
+                            <table id="movementTable">
+                                <thead>
+                                    <tr>
+                                        <th>Movement Count</th>
+                                        <th>Status</th>
+                                        <th>Time & Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Rows will be generated dynamically here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
+
     </main>
 
-    <script src="test.js"></script>
+    <script src="/script/profile.js"></script>
+    <script src="/script/date.js"></script>
+    <script src="/script/logout.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | DreamCatcher</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <!-- <link rel="stylesheet" href="/css/index.css"> -->
+
+</head>
+
+<body>
+    <div class="left-side">
+        <img src="/images/logo.png" alt="" srcset="">
+        <h1>Dream<span>Catcher</span></h1>
+        <p>Smart. Safe. Soothing.</p>
+    </div>
+
+    <form action="#" method="POST">
+        <h2>Welcome!</h2>
+
+        <div class="form-group">
+            <label for="name">Baby's First Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="Girl">Female</option>
+                <option value="Boy">Male</option>
+                <!-- F other gender(s), we only have two -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" step="0.1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" name="nationality" required>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age (in months):</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+
+        <div class="form-group">
+            <label for="guardian-name">Guardian's Name:</label>
+            <input type="text" id="guardian-name" name="guardianName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="baby-character">Baby's Character:</label>
+            <select id="baby-character" name="character" required>
+                <option value="">Select</option>
+                <option value="Good">Good</option>
+                <option value="Naughty">Naughty</option>
+                <option value="Cheerful">Cheerful</option>
+                <option value="Calm">Calm</option>
+                <option value="Curious">Curious</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Register</button>
+        </div>
+
+        <p>Already registered? <a class="click-here" href="/index.html">Click here</a></p>
+    </form>
+
+
+    <script src="/script/register.js"></script>
+</body>
+
+</html>

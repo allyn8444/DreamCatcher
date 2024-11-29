@@ -78,7 +78,7 @@ app.get('/chart.umd.js', (req, res) => {
 // Serve index.html for the root route
 app.get('/', (req, res) => {
 
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'register.html'));
 });
 
 
@@ -90,6 +90,15 @@ app.get('/profile.html', (req, res) => {
 // Serve settings.html
 app.get('/settings.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'settings.html'));
+});
+
+// Serve index.html
+app.get('/index.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.get('/register.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'register.html'));
 });
 
 
@@ -150,6 +159,7 @@ io.on('connection', (socket) => {
         motionCount++;
         const now = Date.now();
         const elapsedTime = now - motionStartTime;
+
 
         if (elapsedTime >= 60000) {
             // Check if motion count exceeds the threshold

@@ -2,7 +2,7 @@
 
 ## References:
 - Check the Schematic Diagram and Copy the Circuit Diagram. (For more info, check the [project documentation](https://docs.google.com/document/d/1W3UlDw9eblVcIKKHZNt2959oXTZyLfrAGaKOUJA_Q1o/edit?usp=sharing))
-- Also check the this [Tinkercad Diagram](https://www.tinkercad.com/things/77Hawcx0KD3-copy-of-motion-and-temperature-sensor-project-ds2?sharecode=MX6qyf7J8CmovFul3lb2Niv0tt2J1S9G0pq7DLUpKgg) for testing.
+- Also check this [Tinkercad Diagram](https://www.tinkercad.com/things/77Hawcx0KD3-copy-of-motion-and-temperature-sensor-project-ds2?sharecode=MX6qyf7J8CmovFul3lb2Niv0tt2J1S9G0pq7DLUpKgg) for testing.
 
 
 ## Installations and Downloads:
@@ -51,3 +51,7 @@ The Arduino Uno should be connected to a computer or laptop.
 It won't be able to communicate data (to our web app) without a serial connection unless we will add additional modules.
 
 
+## Members:
+- ALLYN RALF LEDESMA
+- JUSTIN JONES BREY
+- MICHELLE JOY JUANICO
