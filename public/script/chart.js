@@ -238,7 +238,7 @@ function startAppending() {
     // Determine the interval based on the chosen value
     switch (chosenInterval) {
         case "10":
-            intervalMs = 4980; // 10 mins = 49.8 seconds
+            intervalMs = 49800; // 10 mins = 49.8 seconds
             break;
         case "15":
             intervalMs = 75000; // 15 mins = 1 min 15 secs
